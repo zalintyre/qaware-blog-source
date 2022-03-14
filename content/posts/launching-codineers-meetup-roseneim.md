@@ -10,17 +10,17 @@ aliases:
 summary: We finally launched out long planned meetup series about software engineering in Rosenheim.
 ---
 
-Back in 2019, QAware opened a new office In Rosenheim, southern Bavaria. We moved into the beautiful top floor of the old paper factory of Rosenheim. From the beginning, we had plans to create a new meetup format in this town. 
+In 2019, QAware opened a new office in Rosenheim, Southern Bavaria. We moved into the beautiful top floor of the old paper factory at Rosenheim. From the very beginning we had plans to set up a new meetup in our town. 
 
-But then, the Coronavirus striked. After two and a half years of planning, hoping and sweating that the coronavirus would allow a meetup in presence, we finally decided to stage the first episode of "Codineers" as a virtual event!
-As a quantum of solace, every attendee received a voucher to order themselves a delicious dinner, though.
+But then, the Coronavirus striked. After two and a half years of planning, sweating and hoping that the coronavirus would allow a meetup in presence, we finally decided to stage the first episode of "Codineers" as a virtual event!
+As a quantum of solace, every attendee received a voucher to order themselves a delicious dinner.
 
 ## Quarkus Quickstart
 
 The first talk was "Quarkus Quickstart" - a short introduction into the fantastic world of asynchronous and reactive development for backend systems. 
 [Quarkus](https://quarkus.io/), a fairly new but by now with version 2.7 more than stable Java Web Application Framework, promises a whole lot of fun while developing systems.
 
-Just imagine you could query three Rest APIs at the same time - and continue processing when all the responses have arrived. With Smallrye Mutiny included in Quarkus, you can! 
+Just imagine you could query three Rest APIs at the same time, setup some processing in the meantime, and automatically get the end result when all the responses have arrived. With Smallrye Mutiny included in Quarkus, you can! 
 With the `Uni<T>` type, you have a simple way to request, process and pass objects or queries that might take some time to execute.  
 
 The following example shows three queries to the RKIs official Covid statistics:
@@ -49,7 +49,7 @@ Uni<CovidData> retrieveCovidData(RoutingExchange rc) {
 
 Neat, isn't it? There is absolutely no hassle with asynchronous callbacks or promises. You can just return a `Uni<T>` in Rest controllers and Quarkus will take care of the rest.
 
-You might think of some corner cases regaring error handling - this is also no problem. Quarkus offers a convenient API to handle errors in asynchronous code:
+You might think of some corner cases regarding error handling - this is also no problem. Quarkus offers a convenient API to handle errors in asynchronous code:
 
 ```java
 Uni<String> uni = invokePickyService(client)
